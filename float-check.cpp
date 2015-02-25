@@ -18,11 +18,11 @@ namespace {
                                                         check::PostStmt<FloatingLiteral>
                                                         > 
     {
-        mutable OwningPtr<BugType> bugType;
+        mutable std::unique_ptr<BugType> bugType;
 
         public:
         FloatExcessPrecisionChecker() 
-			: bugType(new BugType("Excess floating-point precision", "androm3da analyzer"))
+			: bugType(new BugType(this, "Excess floating-point precision", "androm3da analyzer"))
         {
         }
         
