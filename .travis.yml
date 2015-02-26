@@ -1,0 +1,7 @@
+language: c++
+env:
+  - LLVM_VERSION=3.4
+  - LLVM_VERSION=3.5
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq clang-${LLVM_VERSION}-dev
