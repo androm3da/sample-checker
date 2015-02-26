@@ -3,7 +3,7 @@
 
 all: libfloatcheck.so
 
-LLVM_VER:=3.4
+LLVM_VER:=3.5
 LLVM_CXXFLAGS:=$(shell llvm-config-$(LLVM_VER) --cxxflags)
 LLVM_LDFLAGS:=$(shell llvm-config-$(LLVM_VER) --ldflags --libs )
 
