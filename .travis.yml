@@ -3,5 +3,6 @@ env:
   - LLVM_VERSION=3.4
   - LLVM_VERSION=3.5
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq clang-${LLVM_VERSION}-dev
+  - sudo apt-get update --quiet --quiet
+  - sudo apt-get install --quiet --quiet clang-${LLVM_VERSION}-dev
+script: make test CXX=clang++ CC=clang
