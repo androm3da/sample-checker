@@ -1,7 +1,7 @@
 language: c++
 env:
   - LLVM_VERSION=3.4
-  - LLVM_VERSION=3.5
+# - LLVM_VERSION=3.5 # not yet avail on travis
 before_install:
   - sudo apt-get update --quiet --quiet
   - sudo apt-get install --quiet --quiet llvm-${LLVM_VERSION}-dev clang-${LLVM_VERSION} libclang-${LLVM_VERSION}-dev
